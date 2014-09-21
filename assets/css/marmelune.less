@@ -22,14 +22,15 @@
 
 /* Macro blocks. */
 html {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
   color: #333333;
   background-color: #f0f0f0;
   font-family: @font_standard;
-  height: 100%;
+  min-height: 100%;
 }
 
 H1, H2, H3, H4, H5, H6 {
@@ -63,7 +64,7 @@ H3 {
 
 #content {
   margin-top: 51px;
-  margin-bottom: -50px;
+  margin-bottom: 80px;
   padding-top: 2em;
   background-color: #e0e0e0;
   background: -webkit-linear-gradient(#e0e0e0, #f0f0f0);
@@ -85,6 +86,25 @@ H3 {
       padding: 0; 
       font-family: @font_title;
     }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #e0e0e0;
+  line-height: 50px;
+  background-color: #f9f9f9;
+  color: #a0a0a0;
+  P {
+    margin: 0 auto;
   }
 }
 
