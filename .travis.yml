@@ -8,4 +8,4 @@ env:
 install:
   - pip install ghp-import
 script:
-        - make develop public gh-pages-commit gh-pages-push
+  - make develop public gh-pages-commit gh-pages-push

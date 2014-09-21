@@ -61,6 +61,7 @@ maintainer-clean: dist-clean
 
 #: gh-pages-commit - Commit generated website into gh-pages branch.
 gh-pages-commit:
+	cp CNAME public/
 	$(GHP) -n public/
 
 
