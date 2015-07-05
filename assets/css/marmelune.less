@@ -43,24 +43,15 @@ H1, H2, H3, H4, H5, H6 {
 }
 
 H1 {
-  font-size: 4em;
+  font-size: 3em;
   margin-top: 0px;
   color: #606060;
 }
 
 H2 {
-  font-size: 3em;
-  margin: 1em auto 0.5em auto;
-  color: #909090;
-  border-width: 0 0 0px 0;
-  border-style: solid;
-  border-color: #e0e0e0;
-}
-
-H3 {
   font-size: 2em;
-  margin: 1em auto 0.5em auto;
-  color: #a0a0a0;
+  margin: 0 auto 0.5em auto;
+  color: #909090;
   border-width: 0 0 0px 0;
   border-style: solid;
   border-color: #e0e0e0;
@@ -73,23 +64,19 @@ H3 {
   background-color: @body_bg_2;
 }
 
-/* Navigation, menus. */
-#navbar_main {
-  border-width: 0;
-  border-color: #f0f0f0;
-  background-color: #f0f0f0;
-  .container-fluid {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #c0c0c0;
-    .navbar-brand {
-      font-size: 2em;
-      line-height: 50px;
-      padding: 0; 
-      font-family: @font_title;
-    }
+#content > DIV {
+  &:extend(.container);
+}
+
+SECTION {
+  .make-row();
+  > DIV {
+    margin-bottom: 2em;
   }
 }
+
+
+/* Navigation, menus, toolbars. */
 
 .footer {
   position: absolute;
@@ -113,4 +100,31 @@ H3 {
 }
 
 /* Home page. */
-BODY#home {}
+BODY#home {
+  #title {
+    .make-xs-column(12);
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);
+  }
+  #activity,
+  #publications,
+  #contact {
+    .make-xs-column-offset(0);
+    .make-sm-column-offset(0);
+    .make-md-column-offset(0);
+    .make-lg-column-offset(0);
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(6);
+    .make-lg-column(4);
+  }
+  #publications {
+    @media (min-width: @screen-sm-min) {
+      float: right;
+    }
+    @media (min-width: @screen-lg-min) {
+      float: left;
+    }
+  }
+}
