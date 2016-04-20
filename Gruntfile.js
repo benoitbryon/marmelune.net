@@ -24,6 +24,16 @@ module.exports = function(grunt) {
           }
         ]
       },
+      files: {
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/files/',
+            src: '**',
+            dest: 'public/files'
+          }
+        ]
+      },
       fonts: {
         files: [
           {
@@ -93,6 +103,10 @@ module.exports = function(grunt) {
       img: {
         files: ['assets/img/**'],
         tasks: ['copy:img']
+      },
+      files: {
+        files: ['assets/files/**'],
+        tasks: ['copy:files']
       },
       fonts: {
         files: ['assets/fonts/**'],
